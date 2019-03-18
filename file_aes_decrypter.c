@@ -41,12 +41,14 @@ int main(int argc, char **argv) {
 
   if (key == NULL) {
     printf("Miss key. eg: -k <keycode>\n");
+    return -1;
   }
 
   int keylen = strlen(key);
 
   if (keylen != 16) {
     printf("KeyCode length is %d, but it must be 16\n", keylen);
+    return -1;
   }
 
   printf("KEY: ");
